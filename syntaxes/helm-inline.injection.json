@@ -1,0 +1,34 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "scopeName": "helm-inline.injection",
+  "patterns": [
+    {
+      "include": "#todo-keyword"
+    },
+    {
+      "include": "#keywords"
+    }
+  ],
+  "repository": {
+    "todo-keyword": {
+      "match": "TODO",
+      "name": "keyword"
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "match": "\\b(if|else|range|template|with|end|nil|with|define|block)\\b",
+          "name": "keyword.control.helm"
+        },
+        {
+          "match": "\\b(nindent)\\b",
+          "name": "keyword.function.helm"
+        },
+        {
+          "match": "\\b(and|call|html|index|slice|js|len|not|or|print(f|ln)?|urlquery|eq|ne|lt|le|gt|ge)\\b",
+          "name": "support.function.builtin.helm"
+        }
+      ]
+    }
+  }
+}

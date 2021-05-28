@@ -1,0 +1,36 @@
+{
+    "comments": {
+        // symbols used for start and end a block comment. Remove this entry if your language does not support block comments
+        "blockComment": [
+            "{{/*", "*/}}"
+        ]
+    },
+    // symbols used as brackets
+    "brackets": [
+        ["{{-", "-}}"],
+        ["{{-", "}}"],
+        ["{{", "-}}"],
+        ["{{", "}}"],
+        ["{", "}"],
+        ["[", "]"],
+        ["(", ")"]
+    ],
+    // symbols that are auto closed when typing
+    // 自动闭合符号
+    "autoClosingPairs": [
+        ["{{", " }}"],
+        ["{", "}"],
+        ["(", ")"],
+        ["\"", "\""],
+        ["'", "'"]
+    ],
+    // symbols that can be used to surround a selection
+    // 自动环绕符号: 当你选择了一堆文本然后输入左括号时，VS Code会对选中内容外围加上对应的括号。这个功能叫做自动环绕符号
+    "surroundingPairs": [
+        ["{", "}"],
+        ["[", "]"],
+        ["(", ")"],
+        ["\"", "\""],
+        ["'", "'"]
+    ]
+}
