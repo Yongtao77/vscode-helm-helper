@@ -238,12 +238,27 @@ export class FuncMap {
         ];
     }
 
-    public f(name: string, args: string, doc: string): vscode.CompletionItem {
+    public f(name: string, argStr: string, doc: string): vscode.CompletionItem {
         const i = new vscode.CompletionItem(name, vscode.CompletionItemKind.Function);
-        i.detail = args;
+        if (argStr.startsWith(name)) {
+            argStr = argStr.replace(name, "").trim()
+        }
+
+        i.detail = name + " " + argStr
         i.documentation = doc;
+
+        if (argStr) {
+            let snippet = new vscode.SnippetString(name)
+            let args = argStr.split(" ")
+            args.forEach(arg => {
+                snippet.appendText(" ").appendPlaceholder(arg.trim())
+            });
+            i.insertText = snippet;
+        }
         return i;
     }
+
+
 
     public v(name: string, use: string, doc: string): vscode.CompletionItem {
         const i = new vscode.CompletionItem(name, vscode.CompletionItemKind.Constant);

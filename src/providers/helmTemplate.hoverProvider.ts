@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { FuncMap } from './helm.funcmap';
+import { FuncMap } from '../helm-support/helm.funcmap';
 import { isPositionInKey } from "../yaml-support/yaml-util";
 
 // Provide hover support

@@ -3,9 +3,10 @@
 	"displayName": "Helm Helper",
 	"description": "Helmer Helper",
 	"version": "0.0.1",
+	"publisher": "yongtao",
 	"license": "MIT",
 	"repository": {
-		"url": "https://github.com/tim-koehler/Helm-Intellisense"
+		"url": "https://github.com/yougtao/vscode-helm-helper"
 	},
 	"engines": {
 		"vscode": "^1.53.0"
@@ -33,7 +34,8 @@
 					"Helm Template"
 				],
 				"filenamePatterns": [
-					"**/templates/*.yaml"
+					"**/templates/*.{yaml,yml}",
+					"**/templates/*.tpl"
 				],
 				"configuration": "./language-configuration.json"
 			}

@@ -1,11 +1,12 @@
 import * as vscode from 'vscode';
 import * as YAML from 'yamljs';
-import * as logger from './logger';
-import { FuncMap } from './helm.funcmap';
-import * as exec from './helm.exec';
+import * as logger from '../helm-support/logger';
+import { FuncMap } from '../helm-support/helm.funcmap';
+import * as exec from '../helm-support/helm.exec';
 import * as path from 'path';
 import * as _ from 'lodash';
 import { existsSync } from 'fs';
+import * as utils from "./utils";
 
 // 补全 Provider
 export class HelmTemplateCompletionItemProvider implements vscode.CompletionItemProvider {
@@ -18,10 +19,9 @@ export class HelmTemplateCompletionItemProvider implements vscode.CompletionItem
 
     public constructor() {
         // The extension activates on things like 'Kubernetes tree visible',
-        // which can occur on any project (not just projects containing k8s
-        // manifests or Helm charts). So we don't want the mere initialisation
-        // of the completion provider to trigger an error message if there are
-        // no charts - this will actually be the *probable* case.
+        // which can occur on any project (not just projects containing k8s manifests or Helm charts).
+        // So we don't want the mere initialisation of the completion provider to trigger an error message 
+        // if there are no charts - this will actually be the *probable* case.
         this.refreshValues({ warnIfNoCharts: false });
     }
 
@@ -32,6 +32,7 @@ export class HelmTemplateCompletionItemProvider implements vscode.CompletionItem
         }
 
         const self = this;
+        console.log("ed.document.fileName: ", ed.document.fileName)
         exec.pickChartForFile(ed.document.fileName, options, (f) => {
             const valsYaml = path.join(f, "values.yaml");
             if (!existsSync(valsYaml)) {
@@ -47,21 +48,29 @@ export class HelmTemplateCompletionItemProvider implements vscode.CompletionItem
     }
 
     public provideCompletionItems(doc: vscode.TextDocument, pos: vscode.Position): vscode.CompletionList | vscode.CompletionItem[] {
-        // If the preceding character is a '.', we kick it into dot resolution mode.
-        // Otherwise, we go with function completion.
-        console.info("好了");
-        const wordPos = doc.getWordRangeAtPosition(pos);
-        if (!wordPos) {
-            return [];
-        }
         const line = doc.lineAt(pos.line).text;
-        const lineUntil = line.substr(0, wordPos.start.character);
-
-        if (lineUntil.endsWith(".")) {
-            return this.dotCompletionItems(lineUntil);
+        const curString = utils.getWordAt(line, pos.character - 1).replace('$.', '.').trim()
+        if (curString.length === 0 || (curString.startsWith('.') && curString.split('.').length < 3)) {
+            return this.funcmap.helmVals()
         }
 
-        return new vscode.CompletionList((new FuncMap).all());
+        if (!curString.startsWith('.')) {
+            return new vscode.CompletionList((new FuncMap).all())
+        }
+
+        if (curString.startsWith(".Values.")) {
+            // todo
+        } else if (curString.startsWith(".Chart.")) {
+            return this.funcmap.chartVals()
+        } else if (curString.startsWith(".Release.")) {
+            return this.funcmap.releaseVals()
+        } else if (curString.startsWith(".Files.")) {
+            return this.funcmap.filesVals()
+        } else if (curString.startsWith(".Capabilities.")) {
+            return this.funcmap.capabilitiesVals()
+        }
+
+        return [];
     }
 
     dotCompletionItems(lineUntil: string): vscode.CompletionItem[] {
@@ -135,6 +144,10 @@ export class HelmTemplateCompletionItemProvider implements vscode.CompletionItem
             );
             return k;
         }
+    }
+
+    getCompletionItemsValues(): any {
+
     }
 
     v(name: string, use: string, doc: string): vscode.CompletionItem {

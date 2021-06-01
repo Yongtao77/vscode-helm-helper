@@ -2,8 +2,10 @@ import * as vscode from 'vscode';
 import { HelmTemplateHoverProvider } from "./providers/helmTemplate.hoverProvider";
 import { HelmTemplateCompletionItemProvider } from "./providers/helmTemplate.completionItemProvider";
 
+// helm mode
+export const HELM_MODE: vscode.DocumentFilter = { language: "helm-template", scheme: "file" };
+
 // this method is called when your extension is activated
-// your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
 	console.log('Congratulations, your extension "helm-helper" is now active!');
 
@@ -13,9 +15,11 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(disposable);
 
 	// Hover Provider
-	vscode.languages.registerHoverProvider("helm-template", new HelmTemplateHoverProvider());
-	// CompletionItem Provider
-	vscode.languages.registerCompletionItemProvider("helm-template", new HelmTemplateCompletionItemProvider());
+	vscode.languages.registerHoverProvider(HELM_MODE, new HelmTemplateHoverProvider());
+	// CompletionItem Function Provider
+	//vscode.languages.registerCompletionItemProvider(HELM_MODE, new HelmTemplateCompletionItemProvider(), ".");
+	// CompletionItem Values Provider
+	//vscode.languages.registerCompletionItemProvider()
 }
 
 // this method is called when your extension is deactivated
