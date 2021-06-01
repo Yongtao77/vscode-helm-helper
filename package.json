@@ -46,6 +46,14 @@
 				"scopeName": "source.helm-template",
 				"path": "./syntaxes/helm-template.tmLanguage.json"
 			}
+		],
+		"themes": [
+			{
+				"id": "monokai-pro-helm",
+				"label": "Monokai Pro Helm",
+				"uiTheme": "vs-dark",
+				"path": "./themes/monokai-pro-helm.json"
+			}
 		]
 	},
 	"scripts": {
