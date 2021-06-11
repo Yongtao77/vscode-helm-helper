@@ -42,7 +42,7 @@
 		"debugIcon.stepOutForeground": "#fcfcfa",
 		"debugIcon.stepOverForeground": "#fcfcfa",
 		"debugIcon.stopForeground": "#ff6188",
-		"debugToolBar.background": "#403e41",
+		"debugToolBar.background": "#ac5ee4",
 		"descriptionForeground": "#939293",
 		"diffEditor.insertedTextBackground": "#a9dc7619",
 		"diffEditor.removedTextBackground": "#ff618819",
@@ -79,7 +79,7 @@
 		"editorError.background": "#00000000",
 		"editorError.border": "#00000000",
 		"editorError.foreground": "#ff6188",
-		"editorGroup.border": "#221f22",
+		"editorGroup.border": "#5d4037", // 编辑器组之间的分隔颜色
 		"editorGroup.dropBackground": "#221f22bf",
 		"editorGroup.emptyBackground": "#19181a",
 		"editorGroup.focusedEmptyBorder": "#221f22",
@@ -252,7 +252,7 @@
 		"settings.textInputBorder": "#403e41",
 		"settings.textInputForeground": "#fcfcfa",
 		"sideBar.background": "#221f22",
-		"sideBar.border": "#19181a",
+		"sideBar.border": "#795548", // 侧边栏分隔编辑器的边框颜色
 		"sideBar.dropBackground": "#221f22bf",
 		"sideBar.foreground": "#939293",
 		"sideBarSectionHeader.background": "#221f22",
@@ -527,7 +527,7 @@
 		//"activityBar.activeBackground": null,
 		//"activityBar.activeFocusBorder": null,
 		//"button.border": null,
-		//"contrastActiveBorder": null,
+		//"contrastActiveBorder": "#d81b60", // 在活动元素周围额外的一层边框，用来提高对比度从而区别其他元素
 		//"contrastBorder": null,
 		//"debugToolBar.border": null,
 		//"diffEditor.border": null,
