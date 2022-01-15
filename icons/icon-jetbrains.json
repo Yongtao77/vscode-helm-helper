@@ -1,0 +1,249 @@
+{
+    "iconDefinitions": {
+        "file_type": {
+            "iconPath": "./jetbrains/file.svg"
+        },
+        "file_type_css": {
+            "iconPath": "./jetbrains/css.svg"
+        },
+        "file_type_javascript": {
+            "iconPath": "./jetbrains/javascript.svg"
+        },
+        "file_type_text": {
+            "iconPath": "./jetbrains/text.svg"
+        },
+        "file_type_json": {
+            "iconPath": "./jetbrains/json.svg"
+        },
+        "file_type_typescript": {
+            "iconPath": "./jetbrains/typescript.svg"
+        },
+        "file_type_jsx": {
+            "iconPath": "./jetbrains/jsx.svg"
+        },
+        "file_type_tsx": {
+            "iconPath": "./jetbrains/tsx.svg"
+        },
+        "file_type_yaml": {
+            "iconPath": "./jetbrains/yaml.svg"
+        },
+        "file_type_markdown": {
+            "iconPath": "./jetbrains/markdown.svg"
+        },
+        "file_type_sql": {
+            "iconPath": "./jetbrains/sql.svg"
+        },
+        "file_type_java": {
+            "iconPath": "./jetbrains/java.svg"
+        },
+        "file_type_java_class": {
+            "iconPath": "./jetbrains/java_class.svg"
+        },
+        "file_type_python": {
+            "iconPath": "./jetbrains/python.svg"
+        },
+        "file_type_dart": {
+            "iconPath": "./jetbrains/dart.svg"
+        },
+        "file_type_kotlin": {
+            "iconPath": "./jetbrains/kotlin.svg"
+        },
+        "file_type_shell": {
+            "iconPath": "./jetbrains/shell.svg"
+        },
+        "file_type_ignore": {
+            "iconPath": "./jetbrains/ignore_file.svg"
+        },
+        "file_type_image": {
+            "iconPath": "./jetbrains/image.svg"
+        },
+        "file_type_xml": {
+            "iconPath": "./jetbrains/xml.svg"
+        },
+        "file_type_c": {
+            "iconPath": "./jetbrains/c.svg"
+        },
+        "file_type_cpp": {
+            "iconPath": "./jetbrains/cpp.svg"
+        },
+        "file_type_ruby": {
+            "iconPath": "./jetbrains/ruby.svg"
+        },
+        "file_type_header": {
+            "iconPath": "./jetbrains/header.svg"
+        },
+        "file_type_sass": {
+            "iconPath": "./jetbrains/sass.svg"
+        },
+        "file_type_less": {
+            "iconPath": "./jetbrains/less.svg"
+        },
+        "file_type_html": {
+            "iconPath": "./jetbrains/html.svg"
+        },
+        "file_type_coffeescript": {
+            "iconPath": "./jetbrains/coffeescript.svg"
+        },
+        "file_type_scala": {
+            "iconPath": "./jetbrains/scala.svg"
+        },
+        "file_type_vue": {
+            "iconPath": "./jetbrains/vue.svg"
+        },
+        "file_type_archive": {
+            "iconPath": "./jetbrains/archive.svg"
+        },
+        "file_type_makefile": {
+            "iconPath": "./jetbrains/makefile.svg"
+        },
+        "file_type_dockerfile": {
+            "iconPath": "./jetbrains/file_dockerfile.svg"
+        },
+        "file_type_dockercompose": {
+            "iconPath": "./jetbrains/dockercompose.svg"
+        },
+        "file_type_gradle": {
+            "iconPath": "./jetbrains/gradle.svg"
+        },
+        "file_type_groovy": {
+            "iconPath": "./jetbrains/groovy.svg"
+        },
+        "file_type_php": {
+            "iconPath": "./jetbrains/php.svg"
+        },
+        "file_type_go": {
+            "iconPath": "./jetbrains/go.svg"
+        },
+        "file_type_eslint": {
+            "iconPath": "./jetbrains/eslint.svg"
+        },
+        "file_type_editorconfig": {
+            "iconPath": "./jetbrains/editorconfig.svg"
+        },
+        "file_type_yarn": {
+            "iconPath": "./jetbrains/yarn.svg"
+        },
+        "file_type_htaccess": {
+            "iconPath": "./jetbrains/htaccess.svg"
+        },
+        "file_type_assembly": {
+            "iconPath": "./jetbrains/asm.svg"
+        },
+        "file_type_cuda": {
+            "iconPath": "./jetbrains/cuda.svg"
+        },
+        "file_type_cuda_header": {
+            "iconPath": "./jetbrains/cuda_header.svg"
+        },
+        "file_type_model": {
+            "iconPath": "./jetbrains/model.svg"
+        },
+        "file_type_csv": {
+            "iconPath": "./jetbrains/csv.svg"
+        },
+        "file_type_binary": {
+            "iconPath": "./jetbrains/binary.svg"
+        },
+        "file_type_toml": {
+            "iconPath": "./jetbrains/toml.svg"
+        },
+        "file_type_rust": {
+            "iconPath": "./jetbrains/rust.svg"
+        },
+        "file_type_julia": {
+            "iconPath": "./jetbrains/julia.svg"
+        },
+        "folder_type": {
+            "iconPath": "./jetbrains/folder.svg"
+        }
+    },
+    "file": "file_type",
+    "folder": "folder_type",
+    "folderNames": {},
+    "fileNames": {
+        ".gitignore": "file_type_ignore",
+        ".dockerignore": "file_type_ignore",
+        ".eslintignore": "file_type_eslint",
+        ".eslintrc.js": "file_type_eslint",
+        ".eslintrc.json": "file_type_eslint",
+        ".editorconfig": "file_type_editorconfig",
+        "makefile": "file_type_makefile",
+        "dockerfile": "file_type_dockerfile",
+        "docker-compose.yml": "file_type_dockercompose",
+        "yarn.lock": "file_type_yarn",
+        ".htaccess": "file_type_htaccess"
+    },
+    "fileExtensions": {
+        "css": "file_type_css",
+        "js": "file_type_javascript",
+        "mjs": "file_type_javascript",
+        "txt": "file_type_text",
+        "json": "file_type_json",
+        "ts": "file_type_typescript",
+        "jsx": "file_type_jsx",
+        "tsx": "file_type_tsx",
+        "yml": "file_type_yaml",
+        "yaml": "file_type_yaml",
+        "md": "file_type_markdown",
+        "sql": "file_type_sql",
+        "java": "file_type_java",
+        "class": "file_type_java_class",
+        "py": "file_type_python",
+        "dart": "file_type_dart",
+        "kt": "file_type_kotlin",
+        "sh": "file_type_shell",
+        "bash": "file_type_shell",
+        "png": "file_type_image",
+        "jpg": "file_type_image",
+        "gif": "file_type_image",
+        "ico": "file_type_image",
+        "svg": "file_type_image",
+        "xml": "file_type_xml",
+        "c": "file_type_c",
+        "cpp": "file_type_cpp",
+        "h": "file_type_header",
+        "hpp": "file_type_header",
+        "rb": "file_type_ruby",
+        "sass": "file_type_sass",
+        "scss": "file_type_sass",
+        "less": "file_type_less",
+        "html": "file_type_html",
+        "coffee": "file_type_coffeescript",
+        "litcoffee": "file_type_coffeescript",
+        "scala": "file_type_scala",
+        "vue": "file_type_vue",
+        "gz": "file_type_archive",
+        "zip": "file_type_archive",
+        "rar": "file_type_archive",
+        "7z": "file_type_archive",
+        "tar": "file_type_archive",
+        "make": "file_type_makefile",
+        "mk": "file_type_makefile",
+        "gradle": "file_type_gradle",
+        "groovy": "file_type_groovy",
+        "gvy": "file_type_groovy",
+        "gy": "file_type_groovy",
+        "gsh": "file_type_groovy",
+        "php": "file_type_php",
+        "go": "file_type_go",
+        "asm": "file_type_assembly",
+        "cu": "file_type_cuda",
+        "cuh": "file_type_cuda_header",
+        "3ds": "file_type_model",
+        "fbx": "file_type_model",
+        "dae": "file_type_model",
+        "stp": "file_type_model",
+        "igs": "file_type_model",
+        "iges": "file_type_model",
+        "stl": "file_type_model",
+        "wrl": "file_type_model",
+        "obj": "file_type_model",
+        "prt": "file_type_model",
+        "csv": "file_type_csv",
+        "bin": "file_type_binary",
+        "dat": "file_type_binary",
+        "toml": "file_type_toml",
+        "rs": "file_type_rust",
+        "jl": "file_type_julia"
+    }
+}

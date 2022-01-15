@@ -54,6 +54,13 @@
 				"uiTheme": "vs-dark",
 				"path": "./themes/monokai-pro-helm.json"
 			}
+		],
+		"iconThemes": [
+			{
+				"id": "jetbrains-icon-theme",
+				"label": "JetBrains Icon Theme",
+				"path": ".icons/icon-jetbrains.json"
+			}
 		]
 	},
 	"scripts": {
